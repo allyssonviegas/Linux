@@ -1,2 +1,2 @@
 # Linux
--- Useful linux scripts
+Useful linux scripts
