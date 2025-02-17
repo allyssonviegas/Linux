@@ -17,6 +17,11 @@ echo "SSH KEYS Permission OK: $now"  > /var/log/ssh-keys.log
 find /var/log/ssh-keys.log -exec chown -R user:user /var/log/ssh-keys.log {} \;
 find /var/log/ssh-keys.log -exec chmod 600 {} \;
 #
+#
+# Setup:
+# 1. Create a file at /etc/cron.d and add +x permission
+# 2. sudo vim /etc/crontab
+# 3. configure the job, i.e (* 1 * * * root /etc/cron.d/set-sshkeys-permission.sh)
 # Set a cronjob to run the script
 # Verification:
 # /var/log/ssh-keys.log
